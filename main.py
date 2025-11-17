@@ -62,18 +62,20 @@ class hero:
         self.vie = random.randint(1,10) + random.randint(1,10)
         self.attaque = random.randint(1,6)
         self.defense = random.randint(1,6)
-        print(self.nom,self.defense,self.attaque,self.vie)
+
     def faire_attaque(self):
-        self.force_attaque = self.attaque + random.randint(1,6)
-        print(self.force_attaque)
+        return self.attaque + random.randint(1,6)
+
     def damage(self,degats):
         self.vie += self.defense - degats
         print(self.vie)
     def est_vivant(self):
-        if (self.vie > 0) : True
+        return self.vie > 0
+
 
 
 bob = hero("bob")
 bob.damage(5)
-bob.est_vivant()
+if bob.est_vivant():
+    print("Il est vivant!")
 

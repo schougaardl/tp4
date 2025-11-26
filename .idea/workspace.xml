@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6502673-bef1-44ff-bba0-9bd2e5eb840d" name="Changes" comment="commit1" />
+    <list default="true" id="c6502673-bef1-44ff-bba0-9bd2e5eb840d" name="Changes" comment="commitfinale">
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,11 +116,28 @@
       <option name="project" value="LOCAL" />
       <updated>1763399338223</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commitfinale">
+      <option name="closed" value="true" />
+      <created>1764185060437</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764185060437</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commitfinale">
+      <option name="closed" value="true" />
+      <created>1764185150618</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764185150618</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit1" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit1" />
+    <MESSAGE value="commitfinale" />
+    <option name="LAST_COMMIT_MESSAGE" value="commitfinale" />
   </component>
 </project>

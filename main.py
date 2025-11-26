@@ -19,13 +19,13 @@ class StringFoo:
 
 
 
-"""
+
 sf = StringFoo()
 
 
 sf.set_string("obligation")
 sf.print_string()
-"""
+
 class Rectangle:
     def __init__(self, longueure, largeure):
         self.longueure = longueure
@@ -34,11 +34,11 @@ class Rectangle:
     def calcul_aire(self):
         self.aire = self.largeure * self.longueure
         print(self.aire)
-"""
-banne = rectangle(3,4)
+
+banne = Rectangle(3,4)
 
 banne.calcul_aire()
-"""
+
 
 class Cercle:
     def __init__(self, rayon):
@@ -51,11 +51,11 @@ class Cercle:
     def calcul_circonférence(self):
         self.circonférence = 2 * math.pi * self.rayon
         print(self.circonférence)
-"""
-oven = cercle(6)
+
+oven = Cercle(6)
 oven.calcul_aire()
 oven.calcul_circonférence()
-"""
+
 
 @dataclass
 class NPCStats:

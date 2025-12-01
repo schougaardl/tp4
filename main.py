@@ -72,7 +72,7 @@ class Hero:
         self.vie = random.randint(1,10) + random.randint(1,10)
         self.attaque = random.randint(1,6)
         self.defense = random.randint(1,6)
-        self.stats = NPCStats()
+
 
     def faire_attaque(self):
         return self.attaque + random.randint(1,6)
@@ -92,4 +92,20 @@ if bob.est_vivant():
 
 print(bob.stats)
 
+class HeroDandD:
+    def __init__(self,nom):
+        self.nom = nom
+        self.vie = random.randint(1,10) + random.randint(1,10)
+        self.attaque = random.randint(1,6)
+        self.defense = random.randint(1,6)
+        self.stats = NPCStats()
+
+    def faire_attaque(self):
+        return self.attaque + random.randint(1,6)
+
+    def damage(self,degats):
+        self.vie += self.defense - degats
+        print(self.vie)
+    def est_vivant(self):
+        return self.vie > 0
 

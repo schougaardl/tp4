@@ -24,7 +24,7 @@ class NPCStats:
 
 class NPC:
 
-    def __init__(self,nom,race,espece,profession):
+    def __init__(self,nom,race="",espece="",profession=""):
         self.Stats = NPCStats()
         self.armure = random.randint(1,12)
         self.nom = nom
@@ -45,7 +45,55 @@ class NPC:
 bob = NPC("bob","arienne","humain","docteur")
 bob.afficher_caracteristique()
 
-class Kobold :
-    def __init__(self):
-        self.kobold_stats = NPC()
+class Kobold(NPC):
+    def __init__(self,nom, profession):
+        super().__init__(nom,profession)
+        self.race = "Kobold"
+
+
+    def attaquer(self,cible):
+        attack_value = random.randint(1,20)
+        if attack_value == 20:
+            cible.subir_dommage(random.randint(1, 8))
+        elif attack_value == 1:
+            print("Le coup n'a pas fonctioner")
+        else:
+            if attack_value < cible.armure:
+                print("Le coup n'a pas fonctioner")
+            else:
+                cible.subir_dommage(random.randint(1, 8))
+        print(attack_value)
+
+    def subir_dommage(self,degats):
+        self.PTvie -= degats
+
+
+class Hero(NPC):
+    def __init__(self, nom, profession):
+        super().__init__(nom, profession)
+        self.race = "Hero"
+
+    def attaquer(self, cible):
+        attack_value = random.randint(1, 20)
+        if attack_value == 20:
+            cible.subir_dommage(random.randint(1, 8))
+        elif attack_value == 1:
+            print("Le coup n'a pas fonctioner")
+        else:
+            if attack_value < cible.armure:
+                print("Le coup n'a pas fonctioner")
+            else:
+                cible.subir_dommage(random.randint(1, 8))
+        print(attack_value)
+
+
+    def subir_dommage(self, degats):
+        self.PTvie -= degats
+
+
+
+H = Hero("H",  "warrior")
+k = Kobold("k",  "warrior")
+
+k.attaquer(H)
 

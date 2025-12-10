@@ -1,16 +1,27 @@
 """
-exercise 2 Lars schougaard 406
-
+exercisse 3 lars schougaard 406
 """
-import random
 from dataclasses import dataclass
-
+from enum import Enum
+import random
 
 def roll_stat():
     stats = [random.randint(1, 6) for x in range(4)]
     stats.sort(reverse=True)
     stats.pop()
     return sum(stats)
+
+class Alignement(Enum):
+    LAWFUL_GOOD = 0
+    NEUTRAL_GOOD = 1
+    CHAOTIC_GOOD = 2
+    LAWFUL_NEUTRAL = 3
+    NEUTRAL = 4
+    CHATIC_NEUTRAL = 5
+    LAWFUL_EVIL = 6
+    NEUTRAL_EVIL = 7
+    CHAOTIC_EVIL = 8
+    UNDEFINED = 9
 
 @dataclass
 class NPCStats:
@@ -32,6 +43,8 @@ class NPC:
         self.espece = espece
         self.PTvie = random.randint(1,20)
         self.profession = profession
+        self.alignement = Alignement.LAWFUL_GOOD
+
     def afficher_caracteristique(self):
         print(self.Stats)
         print(f"nom:{self.nom}")
@@ -41,9 +54,8 @@ class NPC:
         print(f"profession:{self.profession}")
         print(f"armure:{self.armure}")
 
-
-bob = NPC("bob","arienne","humain","docteur")
-bob.afficher_caracteristique()
+    def est_vivant(self):
+        return self.PTvie > 0
 
 class Kobold(NPC):
     def __init__(self,nom, profession):
@@ -97,3 +109,7 @@ k = Kobold("k",  "warrior")
 
 k.attaquer(H)
 
+bob = Hero("bob", "sorcier")
+bob.subir_dommage(5)
+if bob.est_vivant():
+    print("Il est vivant!")

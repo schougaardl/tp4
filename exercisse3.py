@@ -44,27 +44,31 @@ class SacADos:
         self.liste_item = []
 
     def ajouter_item(self, item_ajouter: Item):
+        if len(self.liste_item) == 0:
+            self.liste_item.append(item_ajouter)
+            return
+
         for item in self.liste_item:
             if item.nom == item_ajouter.nom:
-                # existe dans la liste...
                 item.quantite += item_ajouter.quantite
-            else
-                self.liste_item.append(item_ajouter)
+                return item.quantite
+
+        if item_ajouter not in self.liste_item:
+            self.liste_item.append(item_ajouter)
+
+
 
     def retire_item(self, item_ajouter: Item):
         for item in self.liste_item:
             if item.nom == item_ajouter.nom:
                 item.quantite -= item_ajouter.quantite
-            if item.quantite < 0
 
+            if item.quantite < 0:
                 print("l'item nes pas dans le sac a dos")
 
+    def voir_contenu(self):
+        print(self.liste_item)
 
-sad = SacADos()
-sad.ajouter_item(Item(2, "or"))
-sad.ajouter_item(Item(20, "argent"))
-sad.ajouter_item(Item(20, "or"))
-print(sad.liste_item)
 
 
 class NPC:
@@ -118,6 +122,7 @@ class Hero(NPC):
     def __init__(self, nom, profession):
         super().__init__(nom, profession)
         self.race = "Hero"
+        self.sad = SacADos()
 
     def attaquer(self, cible):
         attack_value = random.randint(1, 20)
@@ -144,6 +149,11 @@ k = Kobold("k",  "warrior")
 k.attaquer(H)
 
 bob = Hero("bob", "sorcier")
+bob.sad.ajouter_item(Item(200, "or"))
+bob.sad.ajouter_item(Item(20, "argent"))
+bob.sad.retire_item(Item(20, "or"))
+bob.sad.ajouter_item(Item(30,"argent"))
+bob.sad.voir_contenu()
 bob.subir_dommage(5)
 if bob.est_vivant():
     print("Il est vivant!")

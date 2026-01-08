@@ -33,6 +33,7 @@ class NPCStats:
     inteligence: int = roll_stat()
     sagesse: int = roll_stat()
     charisme: int = roll_stat()
+
 @dataclass
 class Item:
     quantite: int
@@ -93,7 +94,10 @@ class NPC:
         print(f"armure:{self.armure}")
 
     def est_vivant(self):
-        return self.PTvie > 0
+        if self.PTvie > 0:
+            print("Il est vivant!")
+        if self.PTvie < 0:
+            print("Ile est morts")
 
 class Kobold(NPC):
     def __init__(self,nom, profession):
@@ -112,10 +116,11 @@ class Kobold(NPC):
                 print("Le coup n'a pas fonctioner")
             else:
                 cible.subir_dommage(random.randint(1, 8))
-        print(attack_value)
+        print(f"L'attaque a fait", attack_value, "degats.")
 
     def subir_dommage(self,degats):
         self.PTvie -= degats
+
 
 
 class Hero(NPC):
@@ -155,5 +160,4 @@ bob.sad.retire_item(Item(20, "or"))
 bob.sad.ajouter_item(Item(30,"argent"))
 bob.sad.voir_contenu()
 bob.subir_dommage(5)
-if bob.est_vivant():
-    print("Il est vivant!")
+bob.est_vivant()

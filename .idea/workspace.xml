@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6502673-bef1-44ff-bba0-9bd2e5eb840d" name="Changes" comment="commit6" />
+    <list default="true" id="c6502673-bef1-44ff-bba0-9bd2e5eb840d" name="Changes" comment="commitfinal">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,14 +32,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.exercisse2.executor": "Run",
-    "Python.exercisse3.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.exercisse2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.exercisse3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.exercisse3">
     <configuration name="exercisse2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tp4" />
@@ -225,15 +227,31 @@
       <option name="project" value="LOCAL" />
       <updated>1765827513167</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="commit6">
+      <option name="closed" value="true" />
+      <created>1767901117594</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1767901117594</updated>
+    </task>
+    <task id="LOCAL-00014" summary="commitfinal">
+      <option name="closed" value="true" />
+      <created>1767901625944</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1767901625944</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit1" />
     <MESSAGE value="commitfinale" />
     <MESSAGE value="commit4" />
-    <MESSAGE value="commitfinal" />
     <MESSAGE value="commit6" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit6" />
+    <MESSAGE value="commitfinal" />
+    <option name="LAST_COMMIT_MESSAGE" value="commitfinal" />
   </component>
 </project>
